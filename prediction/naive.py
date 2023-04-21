@@ -170,4 +170,4 @@ data = [
         [52, 1, 0, 128, 255, 0, 1, 161, 1, 0, 2, 1, 3]
     ]
 print(make_prediction(data))
-seejan bhattarai
+print(make_prediction(info))
