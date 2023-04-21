@@ -151,7 +151,6 @@ def make_prediction(data):
     # print('Total number of examples are: ', len(mydata))
     # print('Out of these, training examples are: ', len(train_data))
     # print("Test examples are: ", len(test_data))
-
     # # prepare model
     info = MeanAndStdDevForClass(mydata)
 
@@ -171,3 +170,4 @@ data = [
         [52, 1, 0, 128, 255, 0, 1, 161, 1, 0, 2, 1, 3]
     ]
 print(make_prediction(data))
+seejan bhattarai
