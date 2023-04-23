@@ -2,7 +2,6 @@ import math
 import random
 import csv
 
-
 # the categorical class names are changed to numeric data
 # eg: yes and no encoded to 1 and 0
 def encode_class(mydata):
@@ -145,8 +144,8 @@ def make_prediction(data):
         mydata[i] = [float(x) for x in mydata[i]]
     # # split ratio = 0.8
     # # 80% of data is training data and 20% is test data used for testing
-    # ratio = 0.8
-    # train_data, test_data = splitting(mydata, ratio)
+    ratio = 0.8
+    train_data, test_data = splitting(mydata, ratio)
     # print(test_data)
     # print('Total number of examples are: ', len(mydata))
     # print('Out of these, training examples are: ', len(train_data))
@@ -155,9 +154,9 @@ def make_prediction(data):
     info = MeanAndStdDevForClass(mydata)
 
     # test model
-    # predictions = getPredictions(info, test_data)
-    # accuracy = accuracy_rate(test_data, predictions)
-    # print("Accuracy of your model is: ", accuracy)
+    predictions = getPredictions(info, test_data)
+    accuracy = accuracy_rate(test_data, predictions)
+    print("Accuracy of your model is: ", accuracy)
 
     # from sklearn.metrics import accuracy_score
     # test = accuracy_score(test_data, predictions);
@@ -170,4 +169,3 @@ data = [
         [52, 1, 0, 128, 255, 0, 1, 161, 1, 0, 2, 1, 3]
     ]
 print(make_prediction(data))
-print(make_prediction(info))
