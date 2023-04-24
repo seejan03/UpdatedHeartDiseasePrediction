@@ -156,6 +156,7 @@ def make_prediction(data):
     # test model
     predictions = getPredictions(info, test_data)
     accuracy = accuracy_rate(test_data, predictions)
+
     print("Accuracy of your model is: ", accuracy)
 
     # from sklearn.metrics import accuracy_score
