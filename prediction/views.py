@@ -30,14 +30,15 @@ def addpredict(request):
         thal=float(request.POST['thal'])
 
         if request.user.is_authenticated:
-            target = make_prediction([[
+            target , accuracy = make_prediction([[
                 age, sex, cp, trestps,chol,fbs, restecg,   thalch, exang, oldpeak, slope, ca, thal
             ]])
             prediction=Prediction(user=request.user,age=age,sex=sex,cp=cp,trestps=trestps,restecg=restecg,chol=chol,fbs=fbs,thalach=thalch,exang=exang,oldpeak=oldpeak,slope=slope,ca=ca,thal=thal, target = target)
             prediction.save()
             messages.success(request, "Your prediction has been submitted to the concerned one")
             context = {
-                'prediction': prediction
+                'prediction': prediction,
+                'accuracy' : accuracy
             }
             return render(request, 'predictionform/viewprediction.html', context)
         else:

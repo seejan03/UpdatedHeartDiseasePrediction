@@ -133,7 +133,7 @@ def make_prediction(data):
     # driver code
 
     # add the data path in your system
-    filename = "C:\\Users\seeja\OneDrive\Desktop\HeartDiseasePrediction-main\HeartDiseasePrediction-main\prediction\data.csv"
+    filename = "C:\\Users\HP\Desktop\\UpdatedHeartDiseasePrediction\prediction\data.csv"
 
     # load the file and store it in mydata list
     mydata = csv.reader(open(filename, "r"))
@@ -164,10 +164,10 @@ def make_prediction(data):
 
     predict = getPredictions(info, data)
 
-    return int(predict[0])
+    return int(predict[0]) , accuracy
 
 data = [
         [52, 1, 0, 128, 255, 0, 1, 161, 1, 0, 2, 1, 3]
     ]
 print(make_prediction(data))
-Seejan Bhattarai
+
