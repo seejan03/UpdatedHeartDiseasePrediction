@@ -1,5 +1,6 @@
 sext=((1,'Male'),
      (0,'Femele'),
+      (2, 'Others'),
      )
 cpt=((0,'Typical angina'),
     (1,'Atypical agina' ),

@@ -133,7 +133,7 @@ def make_prediction(data):
     # driver code
 
     # add the data path in your system
-    filename = "C:\\Users\HP\Desktop\\UpdatedHeartDiseasePrediction\prediction\data.csv"
+    filename = "C:\\Users\seeja\OneDrive\Desktop\HeartDiseasePrediction-main\HeartDiseasePrediction-main\prediction\data.csv"
 
     # load the file and store it in mydata list
     mydata = csv.reader(open(filename, "r"))
