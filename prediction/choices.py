@@ -7,8 +7,6 @@ cpt=((0,'Typical angina'),
     (2,'Non anginal'),
     (3,'Asymptotic'),
     )
-
-
 trestbpst=((1,'Yes'),
           (0,'No'),
           )

@@ -30,7 +30,11 @@ def splitting(mydata, ratio):
     while len(train) < train_num:
         # index generated randomly from range 0
         # to length of testset
+        random.seed(42)
         index = random.randrange(len(test))
+        # print(index)
+        # index = len(test[5])
+        # print(index)
         # print(index)
         # from testset, pop data rows and put it in train
         train.append(test.pop(index))
@@ -152,9 +156,11 @@ def make_prediction(data):
     # print("Test examples are: ", len(test_data))
     # # prepare model
     info = MeanAndStdDevForClass(mydata)
-
+    # print(test_data)
     # test model
+
     predictions = getPredictions(info, test_data)
+    # print(predictions)
     accuracy = accuracy_rate(test_data, predictions)
 
     print("Accuracy of your model is: ", accuracy)
