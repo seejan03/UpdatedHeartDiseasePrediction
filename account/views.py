@@ -40,16 +40,9 @@ def register(request):
                         messages.error(request, "Wrong username and password")
                         return redirect('login')
 
-
-
-
-
-
         else:
             messages.error(request, "Passwords didnot match")
             return redirect('register')
-
-
 
     else:
         return render(request, 'account/register.html')

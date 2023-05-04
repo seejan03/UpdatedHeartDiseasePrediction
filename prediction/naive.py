@@ -18,7 +18,6 @@ def encode_class(mydata):
 
     return mydata
 
-
 # Splitting the data
 def splitting(mydata, ratio):
     train_num = int(len(mydata) * ratio)
